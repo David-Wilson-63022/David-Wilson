@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin home page</title>
+</head>
+
+<body>
+    <h1>Cookie Cutter Inc. Reimbursement Portal</h1>
+    <h2>Request Designation Log</h2>
+    
+    
+    <div>
+        <p>Here in this portal, you are able to search through<br> 
+            employee reimbursement requests and approve or deny them<br>
+            at your discretion. Use the search bar to locate pending<br>
+            requests, approved or denied requests, and click their<br>
+            request_id# to review them.>
+        </p>
+    </div>
+    
+    <div>
+        <!--Table with User/Employee Reimbursement Requests!
+            Features:
+            1. Search Bar - input "request_id" of specific requests
+                1a. Similarly, search by status via dropdown bar(pending/approved/denied)
+            2. Search Button - confirm "request_id" search and pull any matching request IDs.
+            3. Choose requests to alter/ determine status by clicking on requests' "request_id"
+
+            Contents:
+            a. Request_id
+            b. Date of transaction
+            c. Reimbursement AMT
+            d. Transaction Description
+            e. Status
+        -->
+
+    </div>
+
+    <div>
+        >As an Admin, you are also able to change an employees account <br>
+        status from 'User' to 'Admin', and vice versa. Click here to view <br>
+        the Authorization Portal.
+    
+        <button onclick="">go to Authorization Portal</button>
+    </div>
+        
+    <div>
+        <!--Table that lists Users and Admins
+            Features:
+            1. Search bar - input "user_id" of specific Users
+            2. Search Button - confirm "user_id" search and pull matching user IDs.
+            
+            Contents:
+            a.User_id
+            b.First_name
+            c.Last_name
+            d.Authorization - *REMEMBER* this affects "Account Type" on the home page of the user.
+        -->
+    </div>
+
+   <div>
+        <button><a href="guestLogin1.html">Sign-out</a></button>
+        <!--"Sign-out" will log user out of program.-->
+    </div>
+</body>
+
+</html>

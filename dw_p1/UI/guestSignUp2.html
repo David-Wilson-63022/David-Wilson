@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- This is all boilerplate HTML stuff in the head section. <head> is a section for metadata about the web page -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <!-- This is the body, where we have the content the user will see -->
+    <body>
+    
+    <div>
+        <h1>Cookie Cutter Inc. Reimbursement Portal</h1>
+        <h2>New User Sign-up</h2>
+        <p>
+            >Create your new user credentials. Click 'Add New User' to return to the Sign-in page. <br>
+            You may then sign-in with your new Username and Password. <br>
+        </p>
+    </div>
+
+
+
+    <div>
+        First Name: <input type="text" id="first_name"><br>
+        Last Name: <input type="text" id="last_name"><br>
+        Username: <input type="text" id="username"><br>
+        Email: <input type="text" id="email"><br>
+        Password: <input type="required" type="password" id="password1"><br>
+        Confirm Password: <input type="required" type="password" id="password2"><br>
+    </div>
+
+    <div>    
+        <button type="submit" onclick="Signup()">Add New User</button>
+        <button><a href="guestLogin1.html">Go Back</a></button>
+    </div>
+
+    </body>
+
+
+    <script>
+    /* Code immediately relevant to "guestSignUp2" will be written here. Starting with password verification.
+        1. The password verification has to make sure both 'password' and 'confirm password' are matching before 
+        the account is able to be created - when the submit button is pressed.
+
+        2. The submit button must ensure that new table values are added into dBeaver once passwords are verified and
+        then return user back to the home page.
+    */ 
+        
+    async function Signup() {
+    
+        let employee = {
+         first_name: document.getElementById("first_name").value,
+         last_name: document.getElementById("last_name").value,
+         username: document.getElementById("username").value,
+         email: document.getElementById("email").value,
+         password: document.getAnimations("password").value
+        }
+
+        let url = 'http://localhost:8080/dw_p1/users';
+        let response = await fetch(url, {
+            method: 'POST',           
+            headers:{
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            body: JSON.stringify(user)
+        });
+        
+        
+        
+        if(response.status == 200) {
+            alert("Success!")
+            
+        }else {
+            alert("Something went wrong...");
+        }
+    }
+    
+
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    </script>
+</html>

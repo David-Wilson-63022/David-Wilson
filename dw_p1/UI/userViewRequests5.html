@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user requests page</title>
+</head>
+
+<style>
+    table, th, td {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    html, body {
+        background-color: #8f5ced;
+        height: 40%;
+    }
+
+    html {
+        display: table;
+        margin: auto;
+    }
+
+    body {   
+        max-width: 800px;
+        margin: auto;
+
+        padding: 10px;
+        display: table-cell;
+        vertical-align: middle;
+}
+</style>
+
+
+
+<body>
+    <h1>Cookie Cutter Inc. Reimbursement Portal</h1>
+    <h2>My Requests</h2>
+    
+    <div>
+    <h3>
+        >Listed below are any transaction requests you submitted. If your Admin has<br>
+        not reviewed a pending reimbursement request, you may choose to edit and <br>
+        resubmit that request. When your Admin has reviewed your request, the result<br> 
+        will appear here.
+    </h3>
+    </div>
+    <div>
+        <!-- with 'userHomePage3, values id's 'date_of_transaction, 'reimbursement_amount', and 'transaction_description'
+        will be added to the "reimbursements" table in dBeaver, via servlets, etc.-->
+        <button><a href="userHomePage3.html">Submit new request</a></button>
+        
+        <!-- -->
+
+        <!-- with this button "Go back", it will just return to the employee home page.-->
+        <button><a href="userHomePage3.html">Go Back</a></button>
+    </div>
+    
+    <div>
+      
+    </div>
+    
+    
+    <!-- clear all table rows-->
+    
+    
+ <table>
+  <th>RequestId</th>
+  <th>Reimbursement Amount</th>
+  <th>Transaction Description</th>
+  <th>Status</th>
+ </table>
+    
+
+</body>
+<script>
+
+let currentEmployeeId = window.localStorage.getItem('userId');
+let currentEmployeeStatus = localStorage.getItem('administrator')
+  
+</script>
+
+
+
+</html>

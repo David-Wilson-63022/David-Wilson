@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Request page</title>
+</head>
+
+<body>
+    <h1>Cookie Cutter Inc. Reimbursement Portal</h1>
+    <h2>Edit Reimbursement Request</h2>
+    
+ 
+    <h3>
+        >Edit any fields and click 'Accept changes' to update reimbursement request details.<br>
+        If no changes are desired, click 'Cancel changes' to view requests.
+    </h3>
+
+    <div>
+        <p>
+        Request ID: _(request_id) <br>
+        Employee ID: _(user_id)_ <br>
+        Date of Transaction: <input type="text" id="date_of_transaction"><br>
+        Reimbursement Amount Requested: <input type="text" id="reimbursement_amount"><br>
+        Transaction Description: <input type="text" id="transaction_description"><br> 
+        </p>
+    </div> 
+
+    <div>
+        <!-- with 'userHomePage3, whatever changes made to the request being edited will be accepted and
+        the request will be updated.-->
+        <button><a href="userHomePage3.html">Accept changes</a></button>
+        
+        <!--"Delete Request" will delete the selected request.-->
+        <button onclick=doDelete()>Delete request</button><br>
+
+        <!--"Go Back" will return to the 'View Requests' page.-->
+        <button><a href="userHomePage3.html">Go Back</a></button>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--web.xml is your deployment descriptor
+        this is how tomcat gathers information about your project, such as welcome files,
+            available servlets, how to handle errors and exceptions, and other various
+            configurations you may want tomcat to know about.
+    It belongs in src/main/webapp/WEB-INF/ directory
+-->
+<web-app
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+        version="2.5">
+
+    <listener>
+        <listener-class>com.revature.SERVLETS.DependencyLoaderListenerServlet</listener-class>
+    </listener>
+
+
+    <servlet-mapping>
+        <servlet-name>healthServlet</servlet-name>
+        <url-pattern>/health</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>healthServlet</servlet-name>
+        <servlet-class>com.revature.SERVLETS.HealthServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>userServlet</servlet-name>
+        <url-pattern>/users</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>userServlet</servlet-name>
+        <servlet-class>com.revature.SERVLETS.UserServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+
+    <!-- url pattern is for websites to find the servlet name, i.e. Request Servlet in mapping
+    and then follows the servlet-class path into my IntelliJ to do my bidding-->
+
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/requests</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <servlet-class>com.revature.SERVLETS.RequestServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+
+    <!-- CORS FILTER -->
+    <filter>
+        <filter-name>CorsFilter</filter-name>
+        <filter-class>com.revature.SERVLETS.CORSFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CorsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- /CORS FILTER -->
+
+    <servlet-mapping>
+        <servlet-name>errorHandlerServlet</servlet-name>
+        <url-pattern>/errorHandler</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>errorHandlerServlet</servlet-name>
+        <servlet-class>com.revature.SERVLETS.ErrorHandlerServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+
+
+</web-app>
